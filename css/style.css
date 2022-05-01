@@ -1,0 +1,102 @@
+/* 
+    Author: Akezhan Bexeitov
+    Theme: Restaurant Food Order
+    Version: 1.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: #ff6b81;
+    text-decoration: none;
+    transition: .5s;
+}
+
+a:hover {
+    color: #ff4757;
+}
+
+.wrapper {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.btn {
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #ff4757;
+}
+
+
+/* Header */
+.logo {
+    width: 10%;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-item a {
+    padding: 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+/* Food Search */
+.food-search {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+.food-search input {
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+
+    border-radius: 5px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    margin-right: 5px;
+}
