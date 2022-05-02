@@ -26,7 +26,6 @@ a:hover {
 }
 
 .wrapper {
-    border: 1px solid red;
     width: 80%;
     margin: 0 auto;
     padding: 1%;
@@ -94,7 +93,7 @@ h3 {
 
 /* Header */
 .logo {
-    width: 10%;
+    width: 15%;
 }
 
 .menu {
@@ -149,7 +148,6 @@ h3 {
 }
 
 .box {
-    border: 1px solid orange;
     width: 28%;
 }
 
@@ -165,7 +163,6 @@ h3 {
 
 .food-menu-item {
     width: 43%;
-    border: 1px solid orange;
     margin: 1%;
     padding: 2%;
     background-color: white;
@@ -191,4 +188,67 @@ h3 {
 .food-detail {
     font-size: 1rem;
     color: #747d8c;
+}
+
+
+/* Socials */
+.social-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.social-links i {
+    font-size: 2.5rem;
+}
+
+
+
+/* Mobile Size */
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 80%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        margin: 2% 0;
+    }
+
+    .menu-item a {
+        font-size: 25px;
+    }
+
+    .search input {
+        width: 90%;
+        margin-bottom: 2%;
+        padding: 2%;
+    }
+
+    .btn {
+        width: 90%;
+        padding: 2%;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    .boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 80%;
+        margin: 4% auto;
+    }
+
+    .food-menu-item {
+        width: 90%;
+    }
 }
