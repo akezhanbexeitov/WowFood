@@ -10,6 +10,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.clearfix {
+    clear: both;
+    float: none;
+  }
+
 a {
     color: #ff6b81;
     text-decoration: none;
@@ -146,4 +151,44 @@ h3 {
 .box {
     border: 1px solid orange;
     width: 28%;
+}
+
+
+/* Food Menu */
+.food-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ececec;
+    padding: 4% 0;
+}
+
+.food-menu-item {
+    width: 43%;
+    border: 1px solid orange;
+    margin: 1%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img {
+    width: 30%;
+    float: left;
+}
+
+.food-menu-desc {
+    width: 60%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price {
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.food-detail {
+    font-size: 1rem;
+    color: #747d8c;
 }
