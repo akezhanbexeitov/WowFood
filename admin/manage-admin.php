@@ -7,9 +7,16 @@
             <h1>Manage Admin</h1>
             <br/>
 
-            <button class='btn-primary'>Add Admin</button>
+            <a href="add-admin.php"><button class='btn-primary'>Add Admin</button></a>
             <br/>
             <br/>
+
+            <?php 
+                if(isset($_SESSION['add'])) {
+                    echo $_SESSION['add']; // Displaying sessions message
+                    unset($_SESSION['add']); // Removing session message
+                }
+            ?>
 
             <table class='tbl-full'>
                 <tr>
@@ -19,45 +26,37 @@
                     <th>Actions</th>
                 </tr>
 
-                <tr>
-                    <td>1. </td>
-                    <td>Akezhan Bexeitov</td>
-                    <td>akidulatini</td>
-                    <td>
-                        <button class='btn-secondary'>Update Admin</button>
-                        <button class='btn-danger'>Delete Admin</button>
-                    </td>
-                </tr>
+                <?php
+                    $sql = "SELECT * FROM tbl_admin";
+                    $res = mysqli_query($conn, $sql);
+                    if($res) {
+                        $count = mysqli_num_rows($res);
+                        $sn = 1;
+                        if($count > 0) {
+                            while($rows = mysqli_fetch_assoc($res)) {
+                                $if = $rows['id'];
+                                $full_name = $rows['full_name'];
+                                $username = $rows['username'];  
+                                ?>
+    
+                                <tr>
+                                    <td><?php echo $sn++ ; ?></td>
+                                    <td><?php echo $full_name; ?></td>
+                                    <td><?php echo $username; ?></td>
+                                    <td>
+                                        <button class='btn-secondary'>Update Admin</button>
+                                        <button class='btn-danger'>Delete Admin</button>
+                                    </td>
+                                </tr>
 
-                <tr>
-                    <td>2. </td>
-                    <td>Akezhan Bexeitov</td>
-                    <td>akidulatini</td>
-                    <td>
-                        <button class='btn-secondary'>Update Admin</button>
-                        <button class='btn-danger'>Delete Admin</button>
-                    </td>
-                </tr>
+                                <?php
+                            }
+                        } else {
 
-                <tr>
-                    <td>3. </td>
-                    <td>Akezhan Bexeitov</td>
-                    <td>akidulatini</td>
-                    <td>
-                        <button class='btn-secondary'>Update Admin</button>
-                        <button class='btn-danger'>Delete Admin</button>
-                    </td>
-                </tr>
+                        }
+                    }
+                ?>
 
-                <tr>
-                    <td>4. </td>
-                    <td>Akezhan Bexeitov</td>
-                    <td>akidulatini</td>
-                    <td>
-                        <button class='btn-secondary'>Update Admin</button>
-                        <button class='btn-danger'>Delete Admin</button>
-                    </td>
-                </tr>
             </table>
         </div>
     </div>
